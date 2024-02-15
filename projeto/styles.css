@@ -1,0 +1,190 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Popins', sans-serif;
+}
+
+html, body {
+    height: 100%;
+}
+
+section {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Alterado para 100vh para cobrir toda a tela */
+    padding: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: right;
+    background: linear-gradient(to right, green, blue); /* Gradiente de verde para azul */
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    position: relative;
+    max-width: 80px;
+}
+
+header ul {
+    position: relative;
+    display: flex;
+}
+
+header ul li {
+    list-style: none;
+}
+
+header ul li a {
+    display: inline-block;
+    color: #333;
+    font-weight: 400;
+    margin-left: 40px;
+    text-decoration: none;
+    position: relative;
+}
+
+/* Adicionando a animação */
+header ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #333;
+    transition: width 0.3s ease; /* Transição suave da largura */
+}
+
+header ul li a:hover::after {
+    width: 100%; /* Largura da linha quando passa o mouse */
+}
+
+
+.content {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.content .textBox {
+    position: relative;
+    max-width: 600px;
+}
+
+.content .textBox h2 {
+    color: #333;
+    font-size: 4em;
+    line-height: 1.4em;
+    font-weight: 500;
+}
+
+.content .imgBox {
+    width: 600px;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 50px;
+    margin-top: 50px;
+}
+
+.content .imgBox img {
+    max-width: 340px;
+}
+
+
+.social {
+    position: absolute;
+    top: 50%;
+    right: 30px;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.social li {
+    list-style: none;
+}
+
+.social li a {
+    display: inline-block;
+    margin: 5px 0;
+    transform: scale(0.6);
+}
+
+.social li a img {
+    width: 50px;
+    height: 50px;
+}
+
+
+/* mobile-styles.css */
+
+/* Estilos específicos para dispositivos móveis */
+
+/* Para dispositivos com largura máxima de 768px (como smartphones) */
+@media screen and (max-width: 768px) {
+    section {
+        padding: 20px; /* Reduzindo o preenchimento para dispositivos móveis */
+    }
+
+    header {
+        padding: 10px; /* Reduzindo o preenchimento para dispositivos móveis */
+    }
+
+    header ul {
+        flex-direction: column; /* Alterando a direção para coluna para dispositivos móveis */
+        align-items: center; /* Centralizando os itens na horizontal para dispositivos móveis */
+        margin-top: 10px; /* Adicionando espaço superior para dispositivos móveis */
+    }
+
+    header ul li {
+        margin-bottom: 10px; /* Adicionando espaço inferior entre os itens para dispositivos móveis */
+    }
+
+    .content {
+        flex-direction: column; /* Alterando a direção para coluna para dispositivos móveis */
+        align-items: center; /* Centralizando os itens na horizontal para dispositivos móveis */
+    }
+
+    .logo {
+        margin-bottom: 10px; /* Adicionando margem inferior para separar a logo do restante do conteúdo */
+    }
+
+    .textBox {
+        width: 100%; /* Garantindo que o texto ocupe a largura total da tela */
+        max-width: 100%; /* Definindo a largura máxima como 100% */
+        margin-top: 10px; /* Adicionando margem superior para separar a textBox do header */
+    }
+
+    .textBox h2 {
+        font-size: 2em; /* Reduzindo o tamanho da fonte para dispositivos móveis */
+    }
+
+    .imgBox {
+        display: none; /* Ocultando a classe imgBox para dispositivos móveis */
+    }
+
+    .social {
+        margin-top: 20px; /* Adicionando margem superior para os ícones de redes sociais */
+        display: flex; /* Garantindo que os ícones de redes sociais fiquem em linha */
+        justify-content: center; /* Centralizando os ícones de redes sociais */
+    }
+
+    .social li {
+        margin: 5px; /* Adicionando margem entre os ícones de redes sociais */
+    }
+}
