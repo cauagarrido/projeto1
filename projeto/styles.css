@@ -17,7 +17,7 @@ section {
     display: flex;
     justify-content: space-between;
     align-items: right;
-    background: linear-gradient(to right, green, blue); /* Gradiente de verde para azul */
+    background: linear-gradient(to right, rgb(255, 255, 255), rgb(197, 197, 219)); /* Gradiente de verde para azul */
 }
 
 header {
